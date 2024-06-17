@@ -2,3 +2,9 @@ C:\Users\ali93\Documents\Visual Studio 2013\Projects\AltoControls\AltoControls\b
 C:\Users\ali93\Documents\Visual Studio 2013\Projects\AltoControls\AltoControls\bin\Debug\AltoControls.pdb
 C:\Users\ali93\Documents\Visual Studio 2013\Projects\AltoControls\AltoControls\obj\Debug\AltoControls.dll
 C:\Users\ali93\Documents\Visual Studio 2013\Projects\AltoControls\AltoControls\obj\Debug\AltoControls.pdb
+C:\Users\user\source\repos\AltoControls\AltoControls\bin\Debug\AltoControls.dll
+C:\Users\user\source\repos\AltoControls\AltoControls\bin\Debug\AltoControls.pdb
+C:\Users\user\source\repos\AltoControls\AltoControls\obj\Debug\AltoControls.csproj.AssemblyReference.cache
+C:\Users\user\source\repos\AltoControls\AltoControls\obj\Debug\AltoControls.csproj.CoreCompileInputs.cache
+C:\Users\user\source\repos\AltoControls\AltoControls\obj\Debug\AltoControls.dll
+C:\Users\user\source\repos\AltoControls\AltoControls\obj\Debug\AltoControls.pdb
