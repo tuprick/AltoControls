@@ -30,8 +30,8 @@ namespace AltoControls
             dec = false;
             btnDown.Active1 = btnDown.Active2 = btnUp.Active1 = btnUp.Active2 = Color.Gray;
             btnDown.Inactive1 = btnDown.Inactive2 = btnUp.Inactive1 = btnUp.Inactive2 = Color.LightSlateGray;
-            btnDown.Radius = btnUp.Radius = 0;
-            btnDown.Width = btnUp.Width = 20;
+            btnDown.Radius = btnUp.Radius = 5;
+            btnDown.Width = btnUp.Width = 40;
             btnDown.Parent = btnUp.Parent = this;
             btnDown.Paint += btnDown_Paint;
             btnUp.Stroke = btnDown.Stroke = true;
@@ -46,8 +46,8 @@ namespace AltoControls
             box.Parent = this;
             box.KeyDown += box_KeyDown;
             box.Location = new Point(3, 3);
-            btnDown.Top = 0;
-            box.BorderStyle = BorderStyle.None;
+            btnDown.Top = 0
+            box.BorderStyle = BorderStyle.FixedSingle;
             Font = new Font("Comic Sans MS", 12);
             box.KeyPress += box_KeyPress;
             this.Invalidate();
@@ -73,14 +73,14 @@ namespace AltoControls
         {
             value = dec ? value - 1 : value + 1;
             box.Text = value.ToString();
-            if (timer.Interval >= 50)
-                timer.Interval /= 2;
+            if (timer.Interval > 10)
+                timer.Interval /=2;
 
         }
 
         void btnDown_MouseUp(object sender, MouseEventArgs e)
         {
-            timer.Interval = 400;
+            timer.Interval = 800;
             timer.Stop();
             dec = false;
         }
@@ -90,12 +90,13 @@ namespace AltoControls
             btnDown.Focus();
             dec = true;
             value = double.Parse(box.Text);
+            timer.Interval = 800; // start slowly
             timer.Start();
         }
 
         void btnUp_MouseUp(object sender, MouseEventArgs e)
         {
-            timer.Interval = 400;
+            timer.Interval = 800;
             timer.Stop();
             dec = false;
         }

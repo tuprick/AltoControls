@@ -38,9 +38,25 @@ namespace AltoControls
             {
                 paintTicker.Stop();
                 isOn = value;
+                ToggleControlsEnabled(this.Parent, isOn);
                 paintTicker.Start();
-                if (SliderValueChanged != null)
-                    SliderValueChanged(this, EventArgs.Empty);
+                SliderValueChanged?.Invoke(this, EventArgs.Empty);
+                //if (SliderValueChanged != null)
+                //    SliderValueChanged(this, EventArgs.Empty);
+            }
+        }
+
+        // Method to toggle the enabled state of all controls except the SlideButton
+        private void ToggleControlsEnabled(Control parent, bool enabled)
+        {
+            if (parent == null) return;
+
+            foreach (Control ctrl in parent.Controls)
+            {
+                if (ctrl != this) // Check to ensure not to disable the SlideButton itself
+                {
+                    ctrl.Enabled = enabled;
+                }
             }
         }
         public Color BorderColor

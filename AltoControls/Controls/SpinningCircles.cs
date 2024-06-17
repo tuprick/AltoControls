@@ -18,7 +18,8 @@ namespace AltoControls
             Width = 90;
             Height = 100;
             timer = new System.Windows.Forms.Timer();
-            timer.Tick += timer_Tick;
+            timer.Interval = 120; // Change this value to make the spinning faster or slower
+            timer.Tick += timer_Tick; // This event will be called every *Interval* milliseconds
             timer.Enabled = false;
             SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.OptimizedDoubleBuffer | ControlStyles.ResizeRedraw | ControlStyles.UserPaint | ControlStyles.SupportsTransparentBackColor, true);
             BackColor = Color.Transparent;

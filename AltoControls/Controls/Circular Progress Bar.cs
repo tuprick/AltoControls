@@ -40,8 +40,8 @@ namespace AltoControls
             Location = new Point(100, 100);
             BackColor = Color.Transparent;
             timer.Tick += timer_Tick;
-            timer.Interval = 1;
-            timer.Enabled = true;
+            timer.Interval = 100;
+            timer.Enabled = false;
         }
         #endregion
         int old, current;
